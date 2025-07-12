@@ -2,81 +2,86 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Georgia', serif;
-  background: url('assets/background-puzzle.jpg') repeat;
+  background: url('./background-puzzle.jpg') repeat;
   background-size: contain;
   color: #2a2a2a;
   text-align: center;
 }
 
 .container {
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: auto;
   padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.75); /* soft transparent white */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-  width: 80%;
-  max-width: 400px;
+  max-width: 220px;
   margin: 0 auto 20px;
   display: block;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #2a2a2a;
   margin: 0.5em 0;
 }
 
 h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1.2em;
-  color: #2a2a2a;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.25rem;
   margin-bottom: 1.5em;
 }
 
 .info-box {
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 1.2em;
-  margin: 2em 0;
+  background-color: #fef9f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em 0 2em;
   font-size: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 form {
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  padding: 1.2em;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-input[type="text"],
-textarea {
-  width: 100%;
+input[type="text"], textarea {
   padding: 0.75em;
-  margin-bottom: 1em;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 6px;
   font-family: 'Georgia', serif;
-  background-color: #fdfdfd;
 }
 
 input[type="submit"] {
-  padding: 0.75em 2em;
-  font-size: 1rem;
+  padding: 0.75em;
   background-color: #1a4d4a;
   color: white;
+  font-size: 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
   background-color: #256f6a;
+}
+
+.review-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.review-section li {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 90%;
+  font-size: 0.95rem;
 }
