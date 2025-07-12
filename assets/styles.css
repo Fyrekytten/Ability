@@ -12,10 +12,10 @@ body {
   max-width: 600px;
   margin: auto;
   padding: 40px 20px;
-  background: transparent; /* No white overlay */
-  backdrop-filter: blur(6px); /* Optional: make it dreamy */
+  background: rgba(255, 255, 255, 0.25); /* Very transparent white */
+  backdrop-filter: blur(8px); /* Gentle soft-focus */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -35,8 +35,8 @@ h2 {
 }
 
 .info-box {
-  background: transparent; /* No fill */
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.2); /* Match the transparent vibe */
+  backdrop-filter: blur(6px);
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1em;
