@@ -3,3 +3,11 @@ index.html
   ├── styles.css
   ├── logo-placeholder.png
   └── background-puzzle.jpg
+<!-- Link your stylesheet -->
+<link rel="stylesheet" href="./assets/styles.css">
+
+<!-- Use your logo -->
+<img src="./assets/logo-placeholder.png" alt="Ability Shines Logo">
+
+
+background: url('./background-puzzle.jpg') repeat;
