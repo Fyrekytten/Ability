@@ -1,4 +1,4 @@
-/* 1) Full-page puzzle background */
+/* 1) Full‐page background stays large and soft */
 body {
   margin: 0;
   padding: 0;
@@ -8,7 +8,9 @@ body {
   text-align: center;
 }
 
-/* 2) Container: puzzle tiles + translucent white overlay */
+/* 2) Container now has two layers: 
+     - the puzzle pattern (tiled at 120×120px) 
+     - a semi‐opaque white overlay on top */
 .container {
   max-width: 600px;
   margin: 2em auto;
@@ -16,19 +18,20 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
-  /* Layered backgrounds: tile pattern below, white overlay above */
+  /* bottom layer: puzzle tiles
+     top layer: white with 70% opacity */
   background-image:
     url('background-puzzle.jpg'),
-    rgba(255, 255, 255, 0.6);
+    rgba(255, 255, 255, 0.7);
   background-repeat:
     repeat,
     no-repeat;
   background-size:
-    120px 120px,   /* size of each puzzle tile */
-    100% 100%;     /* overlay covers full container */
+    120px 120px,   /* size of each tile */
+    100% 100%;     /* overlay covers container */
   background-position:
-    top left,      /* tile origin */
-    center center; /* overlay centering */
+    top left,
+    center center;
 }
 
 /* 3) Logo sizing */
@@ -49,9 +52,9 @@ body {
   color: #2a2a2a;
 }
 
-/* 5) Quote box uses same style */
+/* 5) Quote box styling (inherits .info-box) */
 .quote-box {
-  /* no overrides needed */
+  /* no extra rules needed */
 }
 
 /* 6) Section headings */
@@ -66,6 +69,7 @@ form {
   flex-direction: column;
   gap: 1em;
 }
+
 input[type="text"],
 textarea {
   width: 100%;
@@ -79,7 +83,6 @@ textarea {
 
 /* 8) Submit button */
 input[type="submit"] {
-  width: auto;
   padding: 0.75em 2em;
   background-color: #1a4d4a;
   color: #fff;
