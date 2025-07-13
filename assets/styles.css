@@ -3,53 +3,54 @@ body {
   padding: 0;
   font-family: 'Georgia', serif;
   background: url('background-puzzle.jpg') repeat;
-  background-size: cover;
+  background-size: contain;
   color: #2a2a2a;
   text-align: center;
 }
 
 .container {
-  max-width: 600px;
-  margin: auto;
-  padding: 40px 20px;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.88);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e3e0d9;
 }
 
 .logo {
   max-width: 180px;
-  margin: 0 auto 20px;
-}
-
-p {
-  font-size: 1.2rem;
   margin-bottom: 1.5em;
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin: 0.5em 0;
+  font-family: 'Georgia', serif;
+  font-size: 2.4em;
+  margin: 0.5em 0 0.2em;
+  color: #2a2a2a;
 }
 
 h2 {
-  font-size: 1.25rem;
-  margin-bottom: 1.5em;
+  font-size: 1.2rem;
+  margin: 1.5em 0 1em;
+  color: #333;
 }
 
 .info-box {
   background-color: #fef9f0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
   padding: 1em;
-  margin: 1em 0 2em;
+  margin: 1.5em 0;
   font-size: 1rem;
+  color: #3a3a3a;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 2em;
 }
 
 input[type="text"],
@@ -57,22 +58,36 @@ textarea {
   padding: 0.75em;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
   font-family: 'Georgia', serif;
+  background-color: #fdfdfd;
 }
 
-input[type="submit"],
-button {
+button,
+input[type="submit"] {
   padding: 0.75em;
   background-color: #1a4d4a;
   color: white;
   font-size: 1rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover,
-button:hover {
+button:hover,
+input[type="submit"]:hover {
   background-color: #256f6a;
+}
+
+.review-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.review-section li {
+  margin: 0.5em 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.5em;
+  border-radius: 6px;
 }
