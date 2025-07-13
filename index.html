@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,25 +7,30 @@
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <!-- Transparent, centered logo overlay -->
-  <div class="logo-overlay">
-    <img src="assets/logo-placeholder.png" alt="Ability Shines Logo" class="logo" />
-  </div>
-
   <!-- Outer: puzzle-pattern background -->
   <div class="puzzle-bg">
     <!-- Inner: translucent content box -->
     <div class="container">
+      <!-- Logo on top of container -->
+      <img
+        src="assets/logo-placeholder.png"
+        alt="Ability Shines Logo"
+        class="logo"
+      />
+
       <!-- Slogan box under logo -->
       <div class="slogan-box">
         We all have the ability to shine!<br/>
         Aromatherapy made with Love and neurodivergent hands.
       </div>
 
-      <!-- Find-us box -->
-      <div class="info-box">
+      <!-- Find-us box styled like slogan -->
+      <div class="slogan-box">
         <strong>Wondering where to find us?</strong><br/>
-        <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">
+        <a
+          href="https://www.facebook.com/profile.php?id=61572144783909"
+          target="_blank"
+        >
           Check out our Facebook page!
         </a>
       </div>
@@ -35,7 +39,13 @@
       <h2>Leave a Review</h2>
       <form onsubmit="event.preventDefault(); addReview();">
         <input type="text" id="name" name="name" placeholder="Name" required />
-        <textarea id="review" name="review" rows="4" placeholder="Review" required></textarea>
+        <textarea
+          id="review"
+          name="review"
+          rows="4"
+          placeholder="Review"
+          required
+        ></textarea>
         <input type="submit" value="Submit" />
       </form>
 
@@ -60,4 +70,3 @@
   </script>
 </body>
 </html>
-
