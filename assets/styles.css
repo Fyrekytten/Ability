@@ -17,9 +17,14 @@ body {
   max-width: 600px;
   margin: 2em auto;
   padding: 2em;
-  background-color: rgba(255, 255, 255, 0.85);
+  /* two backgrounds: the puzzle and then a semi-opaque white overlay */
+  background: 
+    url('background-puzzle.jpg') repeat,      /* the pattern */
+    rgba(255, 255, 255, 0.8);                  /* the white tint */
+  background-size: 150px 150px, auto;         /* size the tiles */
+  background-blend-mode: lighten;             /* blend the white over the pattern */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* logo sizing */
