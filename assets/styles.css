@@ -1,72 +1,49 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Georgia', serif;
-  background: url('background-puzzle.jpg') repeat;
-  background-size: cover;
-  color: #2a2a2a;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ability Shines Aromatherapy</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="./assets/logo-placeholder.png" alt="Ability Shines Logo" class="logo" />
 
-.container {
-  max-width: 600px;
-  margin: auto;
-  padding: 40px 20px;
-  background: url('background-puzzle.jpg') repeat;
-  background-size: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
+    <p class="subtitle">
+      We all have the ability to shine!<br />
+      Aromatherapy made with Love and neurodifferent hands.
+    </p>
 
-.logo {
-  max-width: 200px;
-  margin: 0 auto 20px;
-}
+    <div class="info-box">
+      <strong>Wondering where to find us?</strong><br />
+      <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">Check out our Facebook page!</a>
+    </div>
 
-h1 {
-  font-size: 2.5rem;
-  color: #2a2a2a;
-  margin: 0.5em 0;
-}
+    <h2>Leave a Review</h2>
+    <form onsubmit="event.preventDefault(); addReview();">
+      <input type="text" id="name" name="name" placeholder="Name" required />
+      <textarea id="review" name="review" rows="4" placeholder="Review" required></textarea>
+      <input type="submit" value="Submit" />
+    </form>
 
-h2 {
-  font-size: 1.25rem;
-  margin-bottom: 1.5em;
-}
+    <div id="reviews" class="review-section">
+      <h2>Reviews</h2>
+      <ul id="reviewList"></ul>
+    </div>
+  </div>
 
-.info-box {
-  background-color: #fef9f0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 1em;
-  margin: 1em 0 2em;
-  font-size: 1rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input[type="text"], textarea {
-  padding: 0.75em;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: 'Georgia', serif;
-}
-
-button, input[type="submit"] {
-  padding: 0.75em;
-  background-color: #1a4d4a;
-  color: white;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover, input[type="submit"]:hover {
-  background-color: #256f6a;
-}
+  <script>
+    function addReview() {
+      const name = document.getElementById('name').value;
+      const review = document.getElementById('review').value;
+      const reviewList = document.getElementById('reviewList');
+      const newItem = document.createElement('li');
+      newItem.innerHTML = `<strong>${name}</strong>: ${review}`;
+      reviewList.appendChild(newItem);
+      document.getElementById('name').value = '';
+      document.getElementById('review').value = '';
+    }
+  </script>
+</body>
+</html>
