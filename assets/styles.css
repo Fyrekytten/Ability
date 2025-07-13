@@ -1,107 +1,144 @@
-/* styles.css */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ability Shines — Debug Test</title>
+  <style>
+    /* === PAGE RESET & BACKGROUND === */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, serif;
+      background: url('background-puzzle.jpg') repeat center center;
+      background-size: cover;
+      color: #2a2a2a;
+      text-align: center;
+    }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Georgia', serif;
-  background: url('background-puzzle.jpg') repeat;
-  background-size: cover;
-  color: #2a2a2a;
-  text-align: center;
-}
+    /* === DEBUG BANNER === */
+    .debug-header {
+      background: crimson;
+      color: white;
+      padding: 1em;
+      margin: 0;
+      font-size: 1.5rem;
+    }
 
-/* Soft translucent wrapper */
-.main-background {
-  background-color: rgba(255, 255, 255, 0.75);
-  margin: 2em auto;
-  max-width: 680px;
-  padding: 2em 1em;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
+    /* === WRAPPER === */
+    .main-background {
+      background-color: rgba(255, 255, 255, 0.75);
+      margin: 2em auto;
+      max-width: 680px;
+      padding: 2em 1em;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
 
-/* Content container */
-.container {
-  max-width: 600px;
-  margin: auto;
-}
+    /* === LOGO === */
+    .logo {
+      max-width: 180px;
+      margin: 0 auto 20px;
+      display: block;
+    }
 
-/* Logo sizing */
-.logo {
-  max-width: 180px;
-  margin: 0 auto 20px;
-  display: block;
-}
+    /* === HEADINGS === */
+    h2 {
+      font-size: 1.3rem;
+      margin: 2em 0 1em;
+    }
 
-/* Section headings */
-h2 {
-  font-size: 1.3rem;
-  margin: 2em 0 1em;
-}
+    /* === INFO BOXES === */
+    .info-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1em;
+      margin: 1.5em 0;
+      font-size: 1.05rem;
+      color: #1a4d4a;
+    }
+    .quote-box {
+      font-style: normal;
+      line-height: 1.5em;
+    }
 
-/* Shared box style for quote and find-us */
-.info-box {
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 1em;
-  margin: 1.5em 0;
-  font-size: 1.05rem;
-  color: #1a4d4a;
-}
+    /* === FORM === */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 1em;
+    }
+    input[type="text"],
+    textarea {
+      padding: 0.75em;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: Georgia, serif;
+    }
+    input[type="submit"] {
+      padding: 0.75em;
+      background-color: #1a4d4a;
+      color: #fff;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #256f6a;
+    }
 
-/* Specific tweaks for the quote box */
-.quote-box {
-  font-style: normal;
-  line-height: 1.5em;
-}
+    /* === REVIEWS === */
+    .review-section {
+      text-align: left;
+      margin-top: 2em;
+    }
+    .review-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .review-section li {
+      margin-bottom: 0.75em;
+      border-bottom: 1px dashed #ccc;
+      padding-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="debug-header">✔️ INDEX.HTML LOADED</h1>
 
-/* Form styling */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 1em;
-}
+  <div class="main-background container">
+    <img src="logo.png" alt="Ability Shines Logo" class="logo">
 
-input[type="text"],
-textarea {
-  padding: 0.75em;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: 'Georgia', serif;
-}
+    <div class="info-box quote-box">
+      <p>"We all have the ability to shine!"</p>
+    </div>
 
-/* Submit button */
-input[type="submit"] {
-  padding: 0.75em;
-  background-color: #1a4d4a;
-  color: #fff;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
+    <h2>Wondering where to find us?</h2>
+    <div class="info-box">
+      <p>Check out our <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">Facebook Page</a>!</p>
+    </div>
 
-input[type="submit"]:hover {
-  background-color: #256f6a;
-}
+    <h2>Leave a Review</h2>
+    <form action="/submit-review" method="post">
+      <input type="text" name="name" placeholder="Your name">
+      <textarea name="review" rows="4" placeholder="Your review"></textarea>
+      <input type="submit" value="Submit">
+    </form>
 
-/* Reviews list */
-.review-section {
-  text-align: left;
-  margin-top: 2em;
-}
-
-.review-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.review-section li {
-  margin-bottom: 0.75em;
-  border-bottom: 1px dashed #ccc;
-  padding-bottom: 0.5em;
-}
+    <section class="review-section">
+      <ul>
+        <li><strong>Jane:</strong> Love the puzzle-piece vibe!</li>
+        <li><strong>Alex:</strong> Soothing design, easy to read.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
