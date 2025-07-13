@@ -18,9 +18,15 @@ body {
 }
 
 .logo {
-  max-width: 160px;
+  max-width: 130px;
   margin: 0 auto 20px;
   display: block;
+}
+
+.intro-text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 1.5em;
 }
 
 h1 {
@@ -60,25 +66,4 @@ textarea {
 
 button,
 input[type="submit"] {
-  padding: 0.75em;
-  background-color: #1a4d4a;
-  color: white;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover,
-input[type="submit"]:hover {
-  background-color: #256f6a;
-}
-
-footer {
-  margin-top: 2em;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-  opacity: 0.7;
-  font-style: italic;
-}
+  padding:
