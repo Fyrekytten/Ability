@@ -1,23 +1,29 @@
-/* Full‐page background */
+/* 1) Full‐page puzzle background, tiled at a fixed size */
 body {
   margin: 0;
   padding: 0;
-  font-family: Georgia, serif;
+  font-family: 'Georgia', serif;
   background: url('background-puzzle.jpg') center/cover no-repeat;
   color: #2a2a2a;
   text-align: center;
 }
 
-/* Container with puzzle‐tile + translucent white overlay */
+/* 2) Faint translucent backdrop behind the main container */
+.outer-background {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2em 0;
+}
+
+/* 3) Container: puzzle tiles + translucent white overlay */
 .container {
   max-width: 600px;
-  margin: 2em auto;
+  margin: auto;
   padding: 2em;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
-  /* Layer 1: tiled puzzle image */
-  /* Layer 2: semi‐opaque white overlay */
+  /* bottom layer: puzzle tiles */
+  /* top layer: white overlay at 60% opacity */
   background-image:
     url('background-puzzle.jpg'),
     rgba(255, 255, 255, 0.6);
@@ -25,23 +31,23 @@ body {
     repeat,
     no-repeat;
   background-size:
-    120px 120px,  /* size of each puzzle tile */
-    100% 100%;    /* white overlay fills container */
+    120px 120px,
+    100% 100%;
   background-position:
     top left,
     center center;
 }
 
-/* Logo */
+/* 4) Logo sizing */
 .logo {
   display: block;
   margin: 0 auto 1.5em;
   max-width: 180px;
 }
 
-/* Boxes */
+/* 5) Shared box style for quote + find-us */
 .info-box {
-  background: rgba(254,249,240,0.9);
+  background: rgba(254, 249, 240, 0.98);
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1em;
@@ -50,22 +56,18 @@ body {
   color: #2a2a2a;
 }
 
-/* Slogan uses the same box style */
-.quote-box { }
-
-/* Headings */
+/* 6) Section headings */
 h2 {
   font-size: 1.25rem;
   margin: 2em 0 1em;
 }
 
-/* Form */
+/* 7) Form fields */
 form {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
-
 input[type="text"],
 textarea {
   width: 100%;
@@ -73,33 +75,34 @@ textarea {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  font-family: inherit;
+  background: #fff;
 }
 
-/* Button */
+/* 8) Submit button */
 input[type="submit"] {
   padding: 0.75em 2em;
   background-color: #1a4d4a;
   color: #fff;
+  font-size: 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
-
 input[type="submit"]:hover {
   background-color: #256f6a;
 }
 
-/* Reviews */
+/* 9) Reviews list */
 .review-section {
   text-align: left;
   margin-top: 2em;
 }
-
 .review-section ul {
   list-style: none;
   padding-left: 0;
 }
-
 .review-section li {
   margin-bottom: 0.75em;
   border-bottom: 1px dashed #ccc;
