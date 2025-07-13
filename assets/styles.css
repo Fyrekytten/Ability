@@ -1,103 +1,77 @@
-/* Full-page puzzle-pattern background */
-.puzzle-container {
-  background: url('background-puzzle.jpg') repeat;
-  background-size: 120px 120px;
-  padding: 2em 0;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ability Shines Aromatherapy</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <!-- outer‐background wraps the container -->
+  <div class="outer-background">
+    <div class="container">
+      <!-- Logo -->
+      <img
+        src="./assets/logo-placeholder.png"
+        alt="Ability Shines Logo"
+        class="logo"
+      />
 
-/* Inner translucent white content box */
-.content-container {
-  max-width: 480px;
-  margin: auto;
-  padding: 2em;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+      <!-- Quote box (crisper) -->
+      <div class="info-box quote-box">
+        We all have the ability to shine!<br/>
+        Aromatherapy made with Love and neurodifferent hands.
+      </div>
 
-/* Taglines above and below logo */
-.tagline {
-  font-size: 1.2rem;
-  color: #3a4d4a;
-  margin: 1em 0;
-  line-height: 1.4;
-  font-weight: 500;
-}
+      <!-- Find‐us box -->
+      <div class="info-box">
+        <strong>Wondering where to find us?</strong><br/>
+        <a
+          href="https://www.facebook.com/profile.php?id=61572144783909"
+          target="_blank"
+        >
+          Check out our Facebook page!
+        </a>
+      </div>
 
-/* Logo size centered, slightly larger */
-.logo {
-  display: block;
-  margin: 0.5em auto;
-  max-width: 200px;
-  height: auto;
-}
+      <!-- Review form -->
+      <h2>Leave a Review</h2>
+      <form onsubmit="event.preventDefault(); addReview();">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name"
+          required
+        />
+        <textarea
+          id="review"
+          name="review"
+          rows="4"
+          placeholder="Review"
+          required
+        ></textarea>
+        <input type="submit" value="Submit" />
+      </form>
 
-/* “Find us” box styling */
-.info-box {
-  background-color: rgba(254, 249, 240, 0.9);
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1em;
-  margin: 1.5em auto;
-  max-width: 90%;
-  color: #3a4d4a;
-  font-weight: 500;
-}
+      <!-- Reviews list -->
+      <div id="reviews" class="review-section">
+        <h2>Reviews</h2>
+        <ul id="reviewList"></ul>
+      </div>
+    </div>
+  </div>
 
-/* Review form elements */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin-top: 1em;
-}
-form input[type="text"],
-form textarea {
-  width: 100%;
-  padding: 0.75em;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: inherit;
-}
-form input[type="submit"] {
-  width: auto;
-  padding: 0.75em 2em;
-  background-color: #2a5a5c;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-form input[type="submit"]:hover {
-  background-color: #1a4d4a;
-}
-
-/* Reviews list styling */
-.review-section {
-  text-align: left;
-  margin-top: 2em;
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.review-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-.review-section li {
-  margin-bottom: 0.75em;
-  border-bottom: 1px dashed #ccc;
-  padding-bottom: 0.5em;
-}
-
-/* Footer slogan styling */
-.footer-slogan {
-  margin-top: 2em;
-  font-style: italic;
-  color: #2a2a2a;
-  font-size: 1rem;
-}
+  <script>
+    function addReview() {
+      const name = document.getElementById("name").value;
+      const review = document.getElementById("review").value;
+      const li = document.createElement("li");
+      li.innerHTML = `<strong>${name}</strong>: ${review}`;
+      document.getElementById("reviewList").appendChild(li);
+      document.getElementById("name").value = "";
+      document.getElementById("review").value = "";
+    }
+  </script>
+</body>
+</html>
