@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: 'Georgia', serif;
   background: url('background-puzzle.jpg') repeat;
-  background-size: contain;
+  background-size: cover;
   color: #2a2a2a;
   text-align: center;
 }
@@ -12,9 +12,10 @@ body {
   max-width: 600px;
   margin: auto;
   padding: 40px 20px;
-  background-color: rgba(255, 255, 255, 0.85);
+  background: url('background-puzzle.jpg') repeat;
+  background-size: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .logo {
@@ -22,13 +23,19 @@ body {
   margin: 0 auto 20px;
 }
 
-.intro-text {
+h1 {
+  font-size: 2.5rem;
+  color: #2a2a2a;
+  margin: 0.5em 0;
+}
+
+h2 {
   font-size: 1.25rem;
   margin-bottom: 1.5em;
 }
 
 .info-box {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #fef9f0;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1em;
@@ -50,7 +57,7 @@ input[type="text"], textarea {
   font-family: 'Georgia', serif;
 }
 
-input[type="submit"] {
+button, input[type="submit"] {
   padding: 0.75em;
   background-color: #1a4d4a;
   color: white;
@@ -60,12 +67,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+button:hover, input[type="submit"]:hover {
   background-color: #256f6a;
-}
-
-footer {
-  margin-top: 2em;
-  font-size: 1rem;
-  color: #444;
 }
