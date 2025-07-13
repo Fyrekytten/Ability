@@ -1,4 +1,4 @@
-/* 1) Full‐page puzzle background, tiled */
+/* 1) Full‐page background: puzzle pattern, tiled */
 body {
   margin: 0;
   padding: 0;
@@ -9,21 +9,22 @@ body {
   text-align: center;
 }
 
-/* 2) Faint translucent backdrop behind the container */
+/* 2) Outer translucent wrapper */
 .outer-background {
   background-color: rgba(255, 255, 255, 0.4);
   padding: 2em 0;
 }
 
-/* 3) Container: layered puzzle + white overlay */
+/* 3) Container: puzzle tile + white overlay */
 .container {
   max-width: 600px;
   margin: auto;
   padding: 2em;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 
-  /* bottom layer: puzzle tile; top layer: white overlay at 60% opacity */
+  /* bottom layer: puzzle tiles */
+  /* top layer: white overlay at 60% opacity */
   background-image:
     url('background-puzzle.jpg'),
     rgba(255, 255, 255, 0.6);
@@ -45,9 +46,9 @@ body {
   max-width: 180px;
 }
 
-/* 5) Shared box style for quote + find-us */
+/* 5) Shared box style for slogan + find-us */
 .info-box {
-  background: rgba(254, 249, 240, 0.98); /* crisper */
+  background: rgba(254, 249, 240, 0.98);
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1em;
@@ -56,18 +57,13 @@ body {
   color: #2a2a2a;
 }
 
-/* 6) Quote-box specific tweak (if needed) */
-.quote-box {
-  /* already more opaque from .info-box rule */
-}
-
-/* 7) Section headings */
+/* 6) Section headings */
 h2 {
   font-size: 1.25rem;
   margin: 2em 0 1em;
 }
 
-/* 8) Form fields */
+/* 7) Form fields */
 form {
   display: flex;
   flex-direction: column;
@@ -84,11 +80,12 @@ textarea {
   background: #fff;
 }
 
-/* 9) Submit button */
+/* 8) Submit button */
 input[type="submit"] {
   padding: 0.75em 2em;
   background-color: #1a4d4a;
   color: #fff;
+  font-size: 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -98,13 +95,10 @@ input[type="submit"]:hover {
   background-color: #256f6a;
 }
 
-/* 10) Reviews list */
+/* 9) Reviews list */
 .review-section {
   text-align: left;
   margin-top: 2em;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .review-section ul {
   list-style: none;
