@@ -1,3 +1,112 @@
+/* 1) Full‐page puzzle background (tiled) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: url('background-puzzle.jpg') top center repeat;
+  background-size: 120px 120px;
+  color: #2a2a2a;
+  text-align: center;
+}
+
+/* 2) Faint translucent wrapper behind the container */
+.outer-background {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 2em 0;
+}
+
+/* 3) Container: puzzles peeking with white overlay */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* layer 1: puzzle tiles; layer 2: white overlay */
+  background-image:
+    url('background-puzzle.jpg'),
+    rgba(255, 255, 255, 0.6);
+  background-repeat:
+    repeat,
+    no-repeat;
+  background-size:
+    120px 120px,
+    100% 100%;
+  background-position:
+    top left,
+    center center;
+}
+
+/* 4) Logo sizing */
+.logo {
+  display: block;
+  margin: 0 auto 1.5em;
+  max-width: 160px;
+}
+
+/* 5) Shared box style for quote + find-us */
+.info-box {
+  background: rgba(254, 249, 240, 0.95); /* crisper box */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1.5em 0;
+  font-size: 1rem;
+  color: #2a2a2a;
+}
+
+/* 6) Section headings */
+h2 {
+  font-size: 1.25rem;
+  margin: 2em 0 1em;
+}
+
+/* 7) Form fields */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.75em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* 8) Submit button */
+input[type="submit"] {
+  padding: 0.75em 2em;
+  background-color: #1a4d4a;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+input[type="submit"]:hover {
+  background-color: #256f6a;
+}
+
+/* 9) Reviews list */
+.review-section {
+  text-align: left;
+  margin-top: 2em;
+}
+.review-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+.review-section li {
+  margin-bottom: 0.75em;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 0.5em;
+}
 /* 1) Full‐page puzzle background, tiled at a fixed size */
 body {
   margin: 0;
