@@ -1,11 +1,15 @@
-/* page background */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Georgia', serif;
-  background: url('background-puzzle.jpg') center/cover repeat;
   color: #2a2a2a;
   text-align: center;
+
+  /* background image */
+  background-image: url('background-puzzle.jpg');
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 /* translucent wrapper */
