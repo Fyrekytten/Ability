@@ -1,111 +1,71 @@
-/* 1) Full‐page background: puzzle pattern, tiled */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Georgia', serif;
-  background: url('background-puzzle.jpg') top center repeat;
-  background-size: 120px 120px;
+  background: url('./background-puzzle.jpg') repeat;
+  background-size: cover;
   color: #2a2a2a;
   text-align: center;
 }
 
-/* 2) Outer translucent wrapper */
-.outer-background {
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 2em 0;
-}
-
-/* 3) Container: puzzle tile + white overlay */
 .container {
   max-width: 600px;
   margin: auto;
-  padding: 2em;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-
-  /* bottom layer: puzzle tiles */
-  /* top layer: white overlay at 60% opacity */
-  background-image:
-    url('background-puzzle.jpg'),
-    rgba(255, 255, 255, 0.6);
-  background-repeat:
-    repeat,
-    no-repeat;
-  background-size:
-    120px 120px,
-    100% 100%;
-  background-position:
-    top left,
-    center center;
 }
 
-/* 4) Logo sizing */
 .logo {
-  display: block;
-  margin: 0 auto 1.5em;
-  max-width: 180px;
+  max-width: 200px;
+  margin: 0 auto 20px;
 }
 
-/* 5) Shared box style for slogan + find-us */
+h1 {
+  font-size: 2.5rem;
+  color: #2a2a2a;
+  margin: 0.5em 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5em;
+}
+
 .info-box {
-  background: rgba(254, 249, 240, 0.98);
+  background-color: #fef9f0;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1em;
-  margin: 1.5em 0;
+  margin: 1em 0 2em;
   font-size: 1rem;
-  color: #2a2a2a;
 }
 
-/* 6) Section headings */
-h2 {
-  font-size: 1.25rem;
-  margin: 2em 0 1em;
-}
-
-/* 7) Form fields */
 form {
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  margin-bottom: 2em;
+  gap: 10px;
 }
-input[type="text"],
-textarea {
-  width: 100%;
+
+input[type="text"], textarea {
   padding: 0.75em;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
-  background: #fff;
+  font-family: 'Georgia', serif;
 }
 
-/* 8) Submit button */
-input[type="submit"] {
-  padding: 0.75em 2em;
+button, input[type="submit"] {
+  padding: 0.75em;
   background-color: #1a4d4a;
-  color: #fff;
+  color: white;
   font-size: 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-input[type="submit"]:hover {
-  background-color: #256f6a;
 }
 
-/* 9) Reviews list */
-.review-section {
-  text-align: left;
-  margin-top: 2em;
-}
-.review-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-.review-section li {
-  margin-bottom: 0.75em;
-  border-bottom: 1px dashed #ccc;
-  padding-bottom: 0.5em;
+button:hover, input[type="submit"]:hover {
+  background-color: #256f6a;
 }
