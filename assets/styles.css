@@ -1,7 +1,7 @@
-/* 1) Outer puzzle-pattern box (smaller, crisper tiles) */
+/* Outer puzzle-pattern box with bold, large tiles */
 .puzzle-bg {
   background: url('background-puzzle.jpg') repeat center;
-  background-size: 600px 600px; /* larger tiles for a bolder look */
+  background-size: 600px 600px; /* large, bold puzzle pieces */
   padding: 2em 0;
   text-align: center;
 }
