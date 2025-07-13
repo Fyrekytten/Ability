@@ -1,79 +1,74 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Georgia', serif;
-  background: url('background-puzzle.jpg') repeat;
+  background: url('./background-puzzle.jpg') repeat;
   background-size: cover;
   color: #2a2a2a;
-  text-align: center;
-}
-
-.main-background {
-  background-color: rgba(255, 255, 255, 0.7);
-  margin: 0 auto;
-  max-width: 620px;
-  padding: 2em 1em;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .container {
-  max-width: 600px;
+  max-width: 480px;
   margin: auto;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.6); /* softened box */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  max-width: 200px;
-  margin: 0 auto 20px;
+  max-width: 160px;
+  margin: 0 auto 1.5em;
+  display: block;
 }
 
-h2 {
-  font-size: 1.25rem;
-  margin-top: 2em;
-  margin-bottom: 1em;
+.subtitle {
+  font-size: 1.1em;
+  color: #3a4d4a; /* Match mockup */
+  margin-bottom: 1.5em;
+  line-height: 1.6;
 }
 
 .info-box {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7); /* softer than pure white */
   padding: 1em;
-  margin: 1.5em 0;
-  font-size: 1rem;
-  color: #1a4d4a;
+  border-radius: 8px;
+  margin: 1.5em auto;
+  color: #3a4d4a;
+  font-weight: 500;
+  max-width: 90%;
 }
 
-.quote-box {
-  font-weight: normal;
-  font-size: 1.1rem;
-  line-height: 1.5em;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 1em;
-}
-
-input[type="text"], textarea {
+form input[type="text"],
+form textarea {
+  width: 90%;
   padding: 0.75em;
-  font-size: 1rem;
+  margin: 0.5em 0;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-family: 'Georgia', serif;
+  font-family: inherit;
+  font-size: 1em;
 }
 
-input[type="submit"] {
-  padding: 0.75em;
-  background-color: #1a4d4a;
+form input[type="submit"] {
+  background-color: #2a5a5c;
   color: white;
-  font-size: 1rem;
+  padding: 0.75em 2em;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 1em;
 }
 
-input[type="submit"]:hover {
-  background-color: #256f6a;
+.review-section {
+  text-align: left;
+  margin-top: 2em;
+}
+
+.review-section ul {
+  padding-left: 1em;
+}
+
+.review-section li {
+  margin-bottom: 1em;
 }
