@@ -20,7 +20,7 @@ body {
 .logo {
   display: block;
   margin: 0 auto 20px;
-  max-width: 120px; /* was 180px—now smaller to fit nicely */
+  max-width: 100px
 }
 
 h1 {
