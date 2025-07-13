@@ -1,3 +1,5 @@
+/* assets/styles.css */
+
 /* 0) Transparent, centered logo overlay */
 .logo-overlay {
   position: fixed;
@@ -13,13 +15,13 @@
 }
 .logo-overlay .logo {
   max-width: 200px;
-  padding: 0.5em;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
+  /* Removed background and padding for full transparency */
+  background: none;
+  padding: 0;
   opacity: 0.6;
 }
 
-/* 1) Outer puzzle‐pattern background */
+/* 1) Outer puzzle-pattern background */
 .puzzle-bg {
   background: url('background-puzzle.jpg') repeat center;
   background-size: 600px 600px;
@@ -51,7 +53,7 @@
   text-align: center;
 }
 
-/* 4) Find‐us box */
+/* 4) Find-us box */
 .info-box {
   background-color: rgba(254, 249, 240, 1);
   border: 1px solid #ccc;
@@ -63,11 +65,13 @@
   text-align: center;
 }
 
-/* 5) Review form & list */
+/* 5) Section heading */
 h2 {
   font-size: 1.25rem;
   margin-bottom: 1em;
 }
+
+/* 6) Form elements */
 form {
   display: flex;
   flex-direction: column;
@@ -91,6 +95,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #256f6a;
 }
+
+/* 7) Reviews list */
 .review-section {
   text-align: left;
   margin-top: 2em;
