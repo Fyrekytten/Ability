@@ -1,7 +1,7 @@
 /* 1) Outer puzzle-pattern box (crisper tiles) */
 .puzzle-bg {
   background: url('background-puzzle.jpg') repeat center;
-  background-size: 80px 80px; /* smaller tiles for more detail */
+  background-size: 100px 100px; /* middle ground */
   padding: 2em 0;
   text-align: center;
 }
@@ -11,7 +11,7 @@
   max-width: 600px;
   margin: auto;
   padding: 40px 20px;
-  background-color: rgba(232, 245, 233, 0.4); /* soft green at 40% */
+  background-color: rgba(232, 245, 233, 0.4); /* soft green at 50% */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   text-align: center;
