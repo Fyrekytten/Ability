@@ -8,13 +8,14 @@ body {
   text-align: center;
 }
 
+/* Background wrapper for everything */
 .main-background {
-  background-color: rgba(255, 255, 255, 0.7);
-  margin: 0 auto;
-  max-width: 640px;
-  padding: 2em 1em;
+  background-color: rgba(255, 255, 255, 0.75); /* Soft white backdrop */
+  margin: 2em auto;
+  max-width: 680px;
+  padding: 2em;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .container {
@@ -27,26 +28,28 @@ body {
   margin: 0 auto 20px;
 }
 
+/* Styled section headings */
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   margin-top: 2em;
   margin-bottom: 1em;
 }
 
+/* Box shared by quote + "find us" */
 .info-box {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1em;
   margin: 1.5em 0;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #1a4d4a;
 }
 
+/* Quote box can be same style for now */
 .quote-box {
+  font-style: normal;
   font-weight: normal;
-  font-size: 1.1rem;
-  line-height: 1.5em;
 }
 
 form {
@@ -56,8 +59,7 @@ form {
   margin-top: 1em;
 }
 
-input[type="text"],
-textarea {
+input[type="text"], textarea {
   padding: 0.75em;
   font-size: 1rem;
   border: 1px solid #ccc;
