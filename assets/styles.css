@@ -1,23 +1,23 @@
-/* 1) Outer puzzle-pattern box (crisper tiles) */
+/* 1) Outer puzzle-pattern box (smaller, crisper tiles) */
 .puzzle-bg {
   background: url('background-puzzle.jpg') repeat center;
-  background-size: 600px 100px; /* middle ground */
+  background-size: 300px 300px;
   padding: 2em 0;
   text-align: center;
 }
 
-/* 2) Inner translucent colored box (soft green) */
+/* 2) Inner translucent white box (40% opacity) */
 .container {
   max-width: 600px;
   margin: auto;
   padding: 40px 20px;
-  background-color: rgba(232, 245, 233, 0.4); /* soft green at 50% */
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   text-align: center;
 }
 
-/* 3) Logo with wispy backdrop */
+/* 3) Logo with wispy translucent backdrop */
 .logo {
   display: inline-block;
   max-width: 180px;
@@ -83,7 +83,8 @@ input[type="submit"]:hover {
   margin-top: 2em;
 }
 .review-section ul {
-  padding-left: 1em;
+  list-style: none;
+  padding-left: 0;
 }
 .review-section li {
   margin-bottom: 1em;
