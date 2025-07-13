@@ -1,87 +1,98 @@
-/* 1) Full‐page puzzle background, tiled at a fixed size */
+/* Full‐page background */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Georgia', serif;
-  background: url('background-puzzle.jpg') top center repeat;
-  background-size: 120px 120px;
+  font-family: Georgia, serif;
+  background: url('background-puzzle.jpg') center/cover no-repeat;
   color: #2a2a2a;
   text-align: center;
 }
 
-/* 2) Centered container, no separate overlay (pattern shows through) */
+/* Container with puzzle‐tile + translucent white overlay */
 .container {
   max-width: 600px;
   margin: 2em auto;
-  padding: 1em 0;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  /* Layer 1: tiled puzzle image */
+  /* Layer 2: semi‐opaque white overlay */
+  background-image:
+    url('background-puzzle.jpg'),
+    rgba(255, 255, 255, 0.6);
+  background-repeat:
+    repeat,
+    no-repeat;
+  background-size:
+    120px 120px,  /* size of each puzzle tile */
+    100% 100%;    /* white overlay fills container */
+  background-position:
+    top left,
+    center center;
 }
 
-/* 3) Logo sizing */
+/* Logo */
 .logo {
   display: block;
   margin: 0 auto 1.5em;
   max-width: 180px;
 }
 
-/* 4) Shared box style for slogan & find-us */
+/* Boxes */
 .info-box {
-  display: inline-block;
-  max-width: 80%;
-  background: rgba(254, 249, 240, 0.8);
+  background: rgba(254,249,240,0.9);
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 1em 1.5em;
-  margin: 1em 0;
-  color: #2a2a2a;
+  padding: 1em;
+  margin: 1.5em 0;
   font-size: 1rem;
-  text-align: center;
+  color: #2a2a2a;
 }
 
-/* 5) Headings */
+/* Slogan uses the same box style */
+.quote-box { }
+
+/* Headings */
 h2 {
   font-size: 1.25rem;
-  margin: 2em 0 0.5em;
+  margin: 2em 0 1em;
 }
 
-/* 6) Form styling */
+/* Form */
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1em;
-  margin-bottom: 2em;
 }
 
 input[type="text"],
 textarea {
-  width: 80%;
+  width: 100%;
   padding: 0.75em;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-family: inherit;
 }
 
-button {
+/* Button */
+input[type="submit"] {
   padding: 0.75em 2em;
   background-color: #1a4d4a;
   color: #fff;
-  font-size: 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
-button:hover {
+input[type="submit"]:hover {
   background-color: #256f6a;
 }
 
-/* 7) Reviews list */
+/* Reviews */
 .review-section {
   text-align: left;
-  max-width: 80%;
-  margin: auto;
+  margin-top: 2em;
 }
 
 .review-section ul {
