@@ -4,20 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ability Shines Aromatherapy</title>
-  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <div class="container">
     <!-- Logo -->
-    <img src="./assets/logo-placeholder.png" alt="Ability Shines Logo" class="logo" />
+    <img
+      src="assets/logo-placeholder.png"
+      alt="Ability Shines Logo"
+      class="logo"
+    />
 
-    <!-- Quote box: needs both classes -->
+    <!-- Slogan box -->
     <div class="info-box quote-box">
       We all have the ability to shine!<br />
       Aromatherapy made with Love and neurodifferent hands.
     </div>
 
-    <!-- Find-us box -->
+    <!-- “Find us” box -->
     <div class="info-box">
       <strong>Wondering where to find us?</strong><br />
       <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">
@@ -30,7 +34,7 @@
     <form onsubmit="event.preventDefault(); addReview();">
       <input type="text" id="name" name="name" placeholder="Name" required />
       <textarea id="review" name="review" rows="4" placeholder="Review" required></textarea>
-      <input type="submit" value="Submit" />
+      <button type="submit">Submit</button>
     </form>
 
     <!-- Reviews list -->
