@@ -1,49 +1,38 @@
-
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ability Shines Aromatherapy</title>
-  <link rel="stylesheet" href="./assets/styles.css">
+  <title>Ability Shines</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <img src="./assets/logo-placeholder.png" alt="Ability Shines Logo" class="logo">
-    <h1>Ability Shines</h1>
-    <h2>Aromatherapy</h2>
-    <p>We all have the ability to shine!<br>
-    Aromaterappy made with Love and neurodifferent hands.</p>
+  <div class="main-background container">
+    <img src="logo.png" alt="Ability Shines Logo" class="logo">
 
+    <div class="info-box quote-box">
+      <p>“We all have the ability to shine!”</p>
+    </div>
+
+    <h2>Wondering where to find us?</h2>
     <div class="info-box">
-      <strong>Wondering where to find us?</strong><br>
-      <a href="https://www.facebook.com/profile.php?id=61572144783909">Check out our Facebook page!</a>
+      <p>Check out our <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">Facebook Page</a>!</p>
     </div>
 
     <h2>Leave a Review</h2>
-    <form onsubmit="event.preventDefault(); addReview();">
-      <input type="text" id="name" name="name" placeholder="Name" required>
-      <textarea id="review" name="review" rows="4" placeholder="Review" required></textarea>
+    <form action="/submit-review" method="post">
+      <input type="text" name="name" placeholder="Your name">
+      <textarea name="review" rows="4" placeholder="Your review"></textarea>
       <input type="submit" value="Submit">
     </form>
 
-    <div id="reviews" class="review-section">
-      <h2>Reviews</h2>
-      <ul id="reviewList"></ul>
-    </div>
+    <section class="review-section">
+      <ul>
+        <li><strong>Jane:</strong> Love the puzzle-piece vibe!</li>
+        <li><strong>Alex:</strong> Soothing design, easy to read.</li>
+        <!-- more reviews here -->
+      </ul>
+    </section>
   </div>
-
-  <script>
-    function addReview() {
-      const name = document.getElementById('name').value;
-      const review = document.getElementById('review').value;
-      const reviewList = document.getElementById('reviewList');
-      const newItem = document.createElement('li');
-      newItem.innerHTML = `<strong>${name}</strong>: ${review}`;
-      reviewList.appendChild(newItem);
-      document.getElementById('name').value = '';
-      document.getElementById('review').value = '';
-    }
-  </script>
 </body>
 </html>
