@@ -20,9 +20,11 @@
 /* 3) Logo styling atop container */
 .logo {
   display: block;
-  margin: 0 auto 1em;
-  max-width: 200px;
+  margin: -60px auto 1em; /* pull logo up above the container */
+  max-width: 400px;
   height: auto;
+  background: none;
+  padding: 0;
 }
 
 /* 4) Slogan and Find-us box styling */
