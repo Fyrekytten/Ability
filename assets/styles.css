@@ -1,3 +1,4 @@
+```css
 /* assets/styles.css */
 
 /* 0) Transparent, centered logo overlay */
@@ -15,7 +16,6 @@
 }
 .logo-overlay .logo {
   max-width: 200px;
-  /* Removed background and padding for full transparency */
   background: none;
   padding: 0;
   opacity: 0.6;
@@ -42,7 +42,7 @@
 
 /* 3) Slogan box styling */
 .slogan-box {
-  background-color: #f5f1e9; /* light beige */
+  background-color: #f5f1e9;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1em;
@@ -109,3 +109,4 @@ input[type="submit"]:hover {
   border-bottom: 1px dashed #ccc;
   padding-bottom: 0.5em;
 }
+```
