@@ -18,9 +18,9 @@ body {
 }
 
 .logo {
-  max-width: 100px;
-  margin: 0 auto 20px;
   display: block;
+  margin: 0 auto 20px;
+  max-width: 120px; /* was 180px—now smaller to fit nicely */
 }
 
 h1 {
