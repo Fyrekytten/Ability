@@ -7,22 +7,18 @@
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <!-- Outer box with puzzle pattern -->
+  <!-- Outer: puzzle-pattern background -->
   <div class="puzzle-bg">
-    <!-- Inner white/translucent box -->
+    <!-- Inner: semi-transparent white box -->
     <div class="container">
-      <!-- Logo -->
-      <img
-        src="assets/logo-placeholder.png"
-        alt="Ability Shines Logo"
-        class="logo"
-      />
-
-      <!-- Intro Text -->
+      <!-- Top tagline -->
       <p class="intro-text">
         We all have the ability to shine!<br/>
         Aromatherapy made with Love and neurodivergent hands.
       </p>
+
+      <!-- Logo -->
+      <img src="assets/logo-placeholder.png" alt="Ability Shines Logo" class="logo" />
 
       <!-- Find-us box -->
       <div class="info-box">
@@ -50,12 +46,12 @@
 
   <script>
     function addReview() {
-      const name   = document.getElementById("name").value;
+      const name = document.getElementById("name").value;
       const review = document.getElementById("review").value;
-      const li     = document.createElement("li");
+      const li = document.createElement("li");
       li.innerHTML = `<strong>${name}</strong>: ${review}`;
       document.getElementById("reviewList").appendChild(li);
-      document.getElementById("name").value   = "";
+      document.getElementById("name").value = "";
       document.getElementById("review").value = "";
     }
   </script>
