@@ -4,12 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ability Shines Aromatherapy</title>
+
+  <!-- Link stylesheet -->
   <link rel="stylesheet" href="./assets/styles.css" />
+
+  <!-- Add Playfair Display font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <img src="./assets/logo-placeholder.png" alt="Ability Shines Logo" class="logo" />
-   
     
     <p>
       We all have the ability to shine!<br />
@@ -40,7 +44,7 @@
       const review = document.getElementById('review').value;
       const reviewList = document.getElementById('reviewList');
       const newItem = document.createElement('li');
-      newItem.innerHTML = <strong>${name}</strong>: ${review};
+      newItem.innerHTML = `<strong>${name}</strong>: ${review}`;
       reviewList.appendChild(newItem);
       document.getElementById('name').value = '';
       document.getElementById('review').value = '';
