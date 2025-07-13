@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Ability Shines — Debug</title>
   <style>
+    /* PAGE RESET & DEBUG BANNER */
     body {
       margin: 0;
       padding: 0;
@@ -19,6 +20,8 @@
       padding: 1em;
       font-size: 1.5rem;
     }
+
+    /* WRAPPER */
     .main-background {
       background: rgba(255,255,255,0.75);
       margin: 2em auto;
@@ -30,34 +33,73 @@
     .container { max-width:600px; margin:auto; }
     .logo { max-width:180px; display:block; margin:0 auto 20px; }
     h2 { font-size:1.3rem; margin:2em 0 1em; }
-    .info-box { background:rgba(255,255,255,0.85); border:1px solid #ccc; border-radius:10px; padding:1em; margin:1.5em 0; color:#1a4d4a; }
+
+    /* INFO BOXES */
+    .info-box {
+      background:rgba(255,255,255,0.85);
+      border:1px solid #ccc;
+      border-radius:10px;
+      padding:1em;
+      margin:1.5em 0;
+      color:#1a4d4a;
+    }
     .quote-box { line-height:1.5; }
-    form { display:flex; flex-direction:column; gap:10px; margin-top:1em; }
-    input,textarea { padding:.75em; border:1px solid #ccc; border-radius:6px; font-family:Georgia, serif; }
-    input[type="submit"] { background:#1a4d4a; color:#fff; cursor:pointer; transition:.2s; }
+
+    /* FORM */
+    form {
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-top:1em;
+    }
+    input, textarea {
+      padding:.75em;
+      border:1px solid #ccc;
+      border-radius:6px;
+      font-family:Georgia, serif;
+      font-size:1rem;
+    }
+    input[type="submit"] {
+      background:#1a4d4a;
+      color:#fff;
+      border:none;
+      cursor:pointer;
+      transition:background 0.2s;
+    }
     input[type="submit"]:hover { background:#256f6a; }
+
+    /* REVIEWS */
     .review-section { text-align:left; margin-top:2em; }
     .review-section ul { list-style:none; padding:0; }
-    .review-section li { margin-bottom:.75em; border-bottom:1px dashed #ccc; padding-bottom:.5em; }
+    .review-section li {
+      margin-bottom:.75em;
+      border-bottom:1px dashed #ccc;
+      padding-bottom:.5em;
+    }
   </style>
 </head>
 <body>
   <h1 class="debug-header">✔️ INDEX.HTML LOADED</h1>
+
   <div class="main-background container">
     <img src="logo.png" alt="Ability Shines Logo" class="logo">
+
     <div class="info-box quote-box">
       <p>"We all have the ability to shine!"</p>
     </div>
+
     <h2>Wondering where to find us?</h2>
     <div class="info-box">
       <p>Check out our <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">Facebook Page</a>!</p>
     </div>
+
     <h2>Leave a Review</h2>
     <form>
       <input type="text" placeholder="Your name">
       <textarea rows="4" placeholder="Your review"></textarea>
       <input type="submit" value="Submit">
     </form>
+
     <section class="review-section">
       <ul>
         <li><strong>Jane:</strong> Love the puzzle-piece vibe!</li>
