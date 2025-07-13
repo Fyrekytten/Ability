@@ -1,21 +1,109 @@
-.main-background {
-  /* Two backgrounds: pattern below, white overlay above */
+/* 1) Full-page puzzle background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: url('background-puzzle.jpg') center/cover no-repeat;
+  color: #2a2a2a;
+  text-align: center;
+}
+
+/* 2) Container: puzzle tiles + translucent white overlay */
+.container {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* Layered backgrounds: tile pattern below, white overlay above */
   background-image:
     url('background-puzzle.jpg'),
-    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
-  
-  /* Pattern tiles, then single white overlay */
-  background-repeat: repeat, no-repeat;
-  
-  /* Size the tile smaller so you see the puzzle pieces distinctly */
-  background-size: 120px 120px, auto;
-  
-  /* Center the overlay and tiles start from top-left by default */
-  background-position: center center, center center;
-  
-  margin: 2em auto;
-  max-width: 680px;
-  padding: 2em 1em;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    rgba(255, 255, 255, 0.6);
+  background-repeat:
+    repeat,
+    no-repeat;
+  background-size:
+    120px 120px,   /* size of each puzzle tile */
+    100% 100%;     /* overlay covers full container */
+  background-position:
+    top left,      /* tile origin */
+    center center; /* overlay centering */
+}
+
+/* 3) Logo sizing */
+.logo {
+  display: block;
+  margin: 0 auto 1.5em;
+  max-width: 180px;
+}
+
+/* 4) Shared box style for quote + find-us */
+.info-box {
+  background: rgba(254, 249, 240, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1.5em 0;
+  font-size: 1rem;
+  color: #2a2a2a;
+}
+
+/* 5) Quote box uses same style */
+.quote-box {
+  /* no overrides needed */
+}
+
+/* 6) Section headings */
+h2 {
+  font-size: 1.25rem;
+  margin: 2em 0 1em;
+}
+
+/* 7) Form fields */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.75em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  background: #fff;
+}
+
+/* 8) Submit button */
+input[type="submit"] {
+  width: auto;
+  padding: 0.75em 2em;
+  background-color: #1a4d4a;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+input[type="submit"]:hover {
+  background-color: #256f6a;
+}
+
+/* 9) Reviews list */
+.review-section {
+  text-align: left;
+  margin-top: 2em;
+}
+.review-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+.review-section li {
+  margin-bottom: 0.75em;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 0.5em;
 }
