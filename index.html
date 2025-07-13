@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,69 +8,167 @@
   <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 <body>
-  <!-- Outer puzzle-pattern wrapper -->
-  <div class="puzzle-container">
-    <!-- Inner translucent content box -->
-    <div class="content-container">
-      <!-- Top tagline -->
-      <div class="tagline">
-        We all have the ability to shine!<br />
-        Aromatherapy made with Love and neurodivergent hands.
-      </div>
+  <div class="container">
+    <!-- Logo -->
+    <img
+      src="./assets/logo-placeholder.png"
+      alt="Ability Shines Logo"
+      class="logo"
+    />
 
-      <!-- Logo -->
-      <img src="./assets/logo-placeholder.png"
-           alt="Ability Shines Logo"
-           class="logo" />
-
-      <!-- Bottom tagline -->
-      <div class="tagline">
-        We all have the ability to shine!<br />
-        Aromatherapy made with Love and neurodivergent hands.
-      </div>
-
-      <!-- Find-us box -->
-      <div class="info-box">
-        <strong>Wondering where to find us?</strong><br />
-        <a href="https://www.facebook.com/profile.php?id=61572144783909"
-           target="_blank">
-          Check out our Facebook page!
-        </a>
-      </div>
-
-      <!-- Review form -->
-      <h2>Leave a Review</h2>
-      <form onsubmit="event.preventDefault(); addReview();">
-        <input type="text" id="name" name="name"
-               placeholder="Name" required />
-        <textarea id="review" name="review" rows="4"
-                  placeholder="Review" required></textarea>
-        <input type="submit" value="Submit" />
-      </form>
-
-      <!-- Reviews list -->
-      <div id="reviews" class="review-section">
-        <h2>Reviews</h2>
-        <ul id="reviewList"></ul>
-      </div>
-
-      <!-- Footer slogan -->
-      <footer class="footer-slogan">
-        Remember to Shine your very best.
-      </footer>
+    <!-- Tagline box -->
+    <div class="info-box quote-box">
+      We all have the ability to shine!<br />
+      Aromatherapy made with Love and neurodivergent hands.
     </div>
+
+    <!-- Find-us box -->
+    <div class="info-box">
+      <strong>Wondering where to find us?</strong><br />
+      <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">
+        Check out our Facebook page!
+      </a>
+    </div>
+
+    <!-- Review form -->
+    <h2>Leave a Review</h2>
+    <form onsubmit="event.preventDefault(); addReview();">
+      <input type="text" id="name" name="name" placeholder="Name" required />
+      <textarea id="review" name="review" rows="4" placeholder="Review" required></textarea>
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Reviews list -->
+    <div id="reviews" class="review-section">
+      <h2>Reviews</h2>
+      <ul id="reviewList"></ul>
+    </div>
+
+    <!-- Footer slogan -->
+    <footer class="footer-slogan">
+      Remember to Shine your very best.
+    </footer>
   </div>
 
   <script>
     function addReview() {
-      const name   = document.getElementById("name").value;
+      const name = document.getElementById("name").value;
       const review = document.getElementById("review").value;
-      const li     = document.createElement("li");
+      const li = document.createElement("li");
       li.innerHTML = `<strong>${name}</strong>: ${review}`;
       document.getElementById("reviewList").appendChild(li);
-      document.getElementById("name").value   = "";
+      document.getElementById("name").value = "";
       document.getElementById("review").value = "";
     }
   </script>
 </body>
 </html>
+
+
+<!-- assets/styles.css -->
+/* Page background: tiled puzzle */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: url('background-puzzle.jpg') top center repeat;
+  background-size: 120px 120px;
+  color: #2a2a2a;
+  text-align: center;
+}
+
+/* Container overlay for content */
+.container {
+  max-width: 480px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Logo: centered, slightly larger */
+.logo {
+  display: block;
+  margin: 0 auto 1.5em;
+  max-width: 200px;
+  height: auto;
+}
+
+/* Shared box style for tagline & find-us */
+.info-box {
+  background-color: rgba(254, 249, 240, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1.5em auto;
+  max-width: 90%;
+  color: #2a2a2a;
+  font-size: 1rem;
+}
+
+/* Tagline styling */
+.quote-box {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Review form styling */
+h2 {
+  font-size: 1.25rem;
+  margin-top: 2em;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+form input[type="submit"] {
+  padding: 0.75em 2em;
+  background-color: #1a4d4a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+form input[type="submit"]:hover {
+  background-color: #256f6a;
+}
+
+/* Reviews list styling */
+.review-section {
+  text-align: left;
+  margin-top: 2em;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.review-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+.review-section li {
+  margin-bottom: 0.75em;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 0.5em;
+}
+
+/* Footer slogan */
+.footer-slogan {
+  margin-top: 2em;
+  font-style: italic;
+  color: #2a2a2a;
+  font-size: 1rem;
+}
