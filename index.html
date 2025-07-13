@@ -4,43 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ability Shines Aromatherapy</title>
-  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <div class="container">
-    <!-- Logo -->
-    <img
-      src="./assets/logo-placeholder.png"
-      alt="Ability Shines Logo"
-      class="logo"
-    />
+  <!-- Outer box with puzzle pattern -->
+  <div class="puzzle-bg">
+    <!-- Inner white/translucent box -->
+    <div class="container">
+      <!-- Logo -->
+      <img
+        src="assets/logo-placeholder.png"
+        alt="Ability Shines Logo"
+        class="logo"
+      />
 
-    <!-- Intro Text -->
-    <p class="intro-text">
-      We all have the ability to shine!<br/>
-      Aromatherapy made with Love and neurodivergent hands.
-    </p>
+      <!-- Intro Text -->
+      <p class="intro-text">
+        We all have the ability to shine!<br/>
+        Aromatherapy made with Love and neurodivergent hands.
+      </p>
 
-    <!-- Find-us box -->
-    <div class="info-box">
-      <strong>Wondering where to find us?</strong><br/>
-      <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">
-        Check out our Facebook page!
-      </a>
-    </div>
+      <!-- Find-us box -->
+      <div class="info-box">
+        <strong>Wondering where to find us?</strong><br/>
+        <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">
+          Check out our Facebook page!
+        </a>
+      </div>
 
-    <!-- Review Form -->
-    <h2>Leave a Review</h2>
-    <form onsubmit="event.preventDefault(); addReview();">
-      <input type="text" id="name" name="name" placeholder="Name" required />
-      <textarea id="review" name="review" rows="4" placeholder="Review" required></textarea>
-      <input type="submit" value="Submit" />
-    </form>
+      <!-- Review Form -->
+      <h2>Leave a Review</h2>
+      <form onsubmit="event.preventDefault(); addReview();">
+        <input type="text" id="name" name="name" placeholder="Name" required />
+        <textarea id="review" name="review" rows="4" placeholder="Review" required></textarea>
+        <input type="submit" value="Submit" />
+      </form>
 
-    <!-- Reviews List -->
-    <div id="reviews" class="review-section">
-      <h2>Reviews</h2>
-      <ul id="reviewList"></ul>
+      <!-- Reviews List -->
+      <div id="reviews" class="review-section">
+        <h2>Reviews</h2>
+        <ul id="reviewList"></ul>
+      </div>
     </div>
   </div>
 
@@ -52,5 +56,8 @@
       li.innerHTML = `<strong>${name}</strong>: ${review}`;
       document.getElementById("reviewList").appendChild(li);
       document.getElementById("name").value   = "";
-      document.getElementB
-::contentReference[oaicite:0]{index=0}
+      document.getElementById("review").value = "";
+    }
+  </script>
+</body>
+</html>
