@@ -8,27 +8,51 @@
 </head>
 <body>
   <div class="container">
-    <img src="./assets/logo-placeholder.png" alt="Ability Shines Logo" class="logo" />
+    <!-- Logo graphic -->
+    <img
+      src="./assets/logo-placeholder.png"
+      alt="Ability Shines Aromatherapy Logo"
+      class="logo"
+    />
 
-    <div class="info-box">
+    <!-- Tagline in its own box -->
+    <div class="info-box quote-box">
       We all have the ability to shine!<br />
       Aromatherapy made with Love and neurodifferent hands.
     </div>
 
+    <!-- Find-us box -->
     <div class="info-box">
       <strong>Wondering where to find us?</strong><br />
-      <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">
+      <a
+        href="https://www.facebook.com/profile.php?id=61572144783909"
+        target="_blank"
+      >
         Check out our Facebook page!
       </a>
     </div>
 
+    <!-- Review form -->
     <h2>Leave a Review</h2>
     <form onsubmit="event.preventDefault(); addReview();">
-      <input type="text" id="name" name="name" placeholder="Name" required />
-      <textarea id="review" name="review" rows="4" placeholder="Review" required></textarea>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Name"
+        required
+      />
+      <textarea
+        id="review"
+        name="review"
+        rows="4"
+        placeholder="Review"
+        required
+      ></textarea>
       <input type="submit" value="Submit" />
     </form>
 
+    <!-- Submitted reviews -->
     <div id="reviews" class="review-section">
       <h2>Reviews</h2>
       <ul id="reviewList"></ul>
@@ -37,14 +61,14 @@
 
   <script>
     function addReview() {
-      const name = document.getElementById('name').value;
-      const review = document.getElementById('review').value;
-      const reviewList = document.getElementById('reviewList');
-      const newItem = document.createElement('li');
-      newItem.innerHTML = `<strong>${name}</strong>: ${review}`;
-      reviewList.appendChild(newItem);
-      document.getElementById('name').value = '';
-      document.getElementById('review').value = '';
+      const name = document.getElementById("name").value;
+      const review = document.getElementById("review").value;
+      const ul = document.getElementById("reviewList");
+      const li = document.createElement("li");
+      li.innerHTML = `<strong>${name}</strong>: ${review}`;
+      ul.appendChild(li);
+      document.getElementById("name").value = "";
+      document.getElementById("review").value = "";
     }
   </script>
 </body>
