@@ -7,42 +7,68 @@
   <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 <body>
-  <div class="container">
-    <img src="./assets/logo-placeholder.png" alt="Ability Shines Logo" class="logo" />
+  <!-- Outer puzzle-pattern wrapper -->
+  <div class="puzzle-container">
+    <!-- Inner translucent content box -->
+    <div class="content-container">
+      <!-- Top tagline -->
+      <div class="tagline">
+        We all have the ability to shine!<br />
+        Aromatherapy made with Love and neurodivergent hands.
+      </div>
 
-    <p class="subtitle">
-      We all have the ability to shine!<br />
-      Aromatherapy made with Love and neurodifferent hands.
-    </p>
+      <!-- Logo -->
+      <img src="./assets/logo-placeholder.png"
+           alt="Ability Shines Logo"
+           class="logo" />
 
-    <div class="info-box">
-      <strong>Wondering where to find us?</strong><br />
-      <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">Check out our Facebook page!</a>
-    </div>
+      <!-- Bottom tagline -->
+      <div class="tagline">
+        We all have the ability to shine!<br />
+        Aromatherapy made with Love and neurodivergent hands.
+      </div>
 
-    <h2>Leave a Review</h2>
-    <form onsubmit="event.preventDefault(); addReview();">
-      <input type="text" id="name" name="name" placeholder="Name" required />
-      <textarea id="review" name="review" rows="4" placeholder="Review" required></textarea>
-      <input type="submit" value="Submit" />
-    </form>
+      <!-- Find-us box -->
+      <div class="info-box">
+        <strong>Wondering where to find us?</strong><br />
+        <a href="https://www.facebook.com/profile.php?id=61572144783909"
+           target="_blank">
+          Check out our Facebook page!
+        </a>
+      </div>
 
-    <div id="reviews" class="review-section">
-      <h2>Reviews</h2>
-      <ul id="reviewList"></ul>
+      <!-- Review form -->
+      <h2>Leave a Review</h2>
+      <form onsubmit="event.preventDefault(); addReview();">
+        <input type="text" id="name" name="name"
+               placeholder="Name" required />
+        <textarea id="review" name="review" rows="4"
+                  placeholder="Review" required></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+
+      <!-- Reviews list -->
+      <div id="reviews" class="review-section">
+        <h2>Reviews</h2>
+        <ul id="reviewList"></ul>
+      </div>
+
+      <!-- Footer slogan -->
+      <footer class="footer-slogan">
+        Remember to Shine your very best.
+      </footer>
     </div>
   </div>
 
   <script>
     function addReview() {
-      const name = document.getElementById('name').value;
-      const review = document.getElementById('review').value;
-      const reviewList = document.getElementById('reviewList');
-      const newItem = document.createElement('li');
-      newItem.innerHTML = `<strong>${name}</strong>: ${review}`;
-      reviewList.appendChild(newItem);
-      document.getElementById('name').value = '';
-      document.getElementById('review').value = '';
+      const name   = document.getElementById("name").value;
+      const review = document.getElementById("review").value;
+      const li     = document.createElement("li");
+      li.innerHTML = `<strong>${name}</strong>: ${review}`;
+      document.getElementById("reviewList").appendChild(li);
+      document.getElementById("name").value   = "";
+      document.getElementById("review").value = "";
     }
   </script>
 </body>
