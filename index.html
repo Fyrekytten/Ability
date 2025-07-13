@@ -4,22 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ability Shines Aromatherapy</title>
+
+  <!-- Link stylesheet -->
   <link rel="stylesheet" href="./assets/styles.css" />
+
+  <!-- Add elegant font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <img src="./assets/logo-placeholder.png" alt="Ability Shines Logo" class="logo" />
-    
-    <p>
+    <!-- Logo (replace with your final image URL if desired) -->
+    <img
+      src="https://media.discordapp.net/attachments/1392276622085980332/1392276776184713327/d1738c7a-82f0-41ad-9f22-31991e102790.png?ex=6874384a&is=6872e6ca&hm=41d49cbf2bbe1b77c641682c6c25ee1fa5d31260c0652908faf16c808090d7ae&=&format=webp&quality=lossless&width=468&height=702"
+      alt="Ability Shines Logo"
+      class="logo"
+    />
+
+    <!-- Tagline -->
+    <p class="tagline">
       We all have the ability to shine!<br />
       Aromatherapy made with Love and neurodifferent hands.
     </p>
 
+    <!-- Info box -->
     <div class="info-box">
       <strong>Wondering where to find us?</strong><br />
       <a href="https://www.facebook.com/profile.php?id=61572144783909" target="_blank">Check out our Facebook page!</a>
     </div>
 
+    <!-- Review Form -->
     <h2>Leave a Review</h2>
     <form onsubmit="event.preventDefault(); addReview();">
       <input type="text" id="name" name="name" placeholder="Name" required />
@@ -27,12 +40,14 @@
       <input type="submit" value="Submit" />
     </form>
 
+    <!-- Review Display -->
     <div id="reviews" class="review-section">
       <h2>Reviews</h2>
       <ul id="reviewList"></ul>
     </div>
   </div>
 
+  <!-- Review Submission Script -->
   <script>
     function addReview() {
       const name = document.getElementById('name').value;
