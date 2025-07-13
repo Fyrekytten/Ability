@@ -9,7 +9,7 @@
 <body>
   <!-- Outer: puzzle-pattern background -->
   <div class="puzzle-bg">
-    <!-- Inner: semi-transparent colored box -->
+    <!-- Inner: semi-transparent white box -->
     <div class="container">
       <!-- Top tagline -->
       <p class="intro-text">
@@ -17,12 +17,8 @@
         Aromatherapy made with Love and neurodivergent hands.
       </p>
 
-      <!-- Logo with wispy backdrop -->
-      <img
-        src="assets/logo-placeholder.png"
-        alt="Ability Shines Logo"
-        class="logo"
-      />
+      <!-- Logo -->
+      <img src="assets/logo-placeholder.png" alt="Ability Shines Logo" class="logo" />
 
       <!-- Find-us box -->
       <div class="info-box">
@@ -50,12 +46,12 @@
 
   <script>
     function addReview() {
-      const name   = document.getElementById("name").value;
+      const name = document.getElementById("name").value;
       const review = document.getElementById("review").value;
-      const li     = document.createElement("li");
+      const li = document.createElement("li");
       li.innerHTML = `<strong>${name}</strong>: ${review}`;
       document.getElementById("reviewList").appendChild(li);
-      document.getElementById("name").value   = "";
+      document.getElementById("name").value = "";
       document.getElementById("review").value = "";
     }
   </script>
