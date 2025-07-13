@@ -1,13 +1,18 @@
-/* 0) Center logo wrapper */
-.logo-wrapper {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
+/* 0) Transparent full-page logo overlay */
+.logo-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+.logo-overlay .logo {
+  max-width: 200px;
+  opacity: 0.6;
 }
 
-/* 1) Bold, large puzzle-pattern background */
+/* 1) Outer puzzle-pattern background */
 .puzzle-bg {
   background: url('background-puzzle.jpg') repeat center;
   background-size: 600px 600px;
@@ -15,7 +20,7 @@
   text-align: center;
 }
 
-/* 2) Inner translucent colored box (soft green at 40% opacity) */
+/* 2) Inner translucent content box */
 .container {
   max-width: 600px;
   margin: auto;
@@ -26,28 +31,19 @@
   text-align: center;
 }
 
-/* 3) Logo styling in wrapper */
-.logo {
-  max-width: 200px;
-  height: auto;
-  padding: 0.5em;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
-}
-
-/* 4) Tagline box styling */
+/* 3) Tagline box styling */
 .tagline-box {
   background-color: rgba(254, 249, 240, 1);
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1em;
-  margin: 1em 0 2em;
+  margin: 1em 0;
   font-size: 1.3rem;
   line-height: 1.6;
   color: #2a2a2a;
 }
 
-/* Shared info-box style */
+/* 4) Shared info-box style */
 .info-box {
   background-color: rgba(254, 249, 240, 1);
   border: 1px solid #ccc;
@@ -58,13 +54,13 @@
   color: #2a2a2a;
 }
 
-/* Section heading */
+/* 5) Section heading */
 h2 {
   font-size: 1.25rem;
   margin-bottom: 1em;
 }
 
-/* Form elements */
+/* 6) Form elements */
 form {
   display: flex;
   flex-direction: column;
@@ -89,7 +85,7 @@ input[type="submit"]:hover {
   background-color: #256f6a;
 }
 
-/* Reviews list */
+/* 7) Reviews list */
 .review-section {
   text-align: left;
   margin-top: 2em;
