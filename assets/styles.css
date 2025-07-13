@@ -18,9 +18,10 @@ body {
 }
 
 .logo {
-  display: block;
-  margin: 0 auto 20px;
-  max-width: 40px
+  display: block !important;
+  margin: 0 auto 20px !important;
+  width: 120px !important;  /* shrink this value until it fits perfectly */
+  height: auto !important;
 }
 
 h1 {
